@@ -1,0 +1,80 @@
+<view class="user_info_wrap">
+  <view wx:if="{{userInfo.avatarUrl}}" class="user_img_wrap">
+    <image class="user_bg" src="{{userInfo.avatarUrl}}" ></image>
+    <view class="user_info">
+      <image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+      <view class="user_name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view wx:else class="user_btn">
+    <navigator url="../login/index">登录</navigator>
+  </view>
+</view>
+
+
+
+<view class="user_content">
+  
+  <view class="user_main">
+    <!-- 历史足迹 -->
+    <view class="history_wrap br">
+      <navigator>
+        <view class="his_num">{{subscribeNums}}</view>
+        <view class="his_name">我的关注</view>
+      </navigator>
+      <navigator url="/pages/collect/index">
+        <view class="his_num">{{collectNums}}</view>
+        <view class="his_name">我的收藏</view>
+      </navigator>
+      <navigator>
+        <view class="his_num">0</view>
+        <view class="his_name">我的互动</view>
+      </navigator>
+      <navigator>
+        <view class="his_num">0</view>
+        <view class="his_name">历史足迹</view>
+      </navigator>
+    </view>
+    <!-- 健康指标 -->
+    <view class="health_wrap br">
+      <view class="health_title">健康指标</view>
+      <view class="health_content">
+        <navigator url="../record/index?" open-type="switchTab">
+          <view class="iconfont icon-qiandao"></view>
+          <view class="health_name">打卡统计</view>
+        </navigator>
+        <navigator url="/pages/order/index?type=2">
+          <view class="iconfont icon-fei"></view>
+          <view class="health_name">肺活量</view>
+        </navigator>
+        <navigator url="/pages/order/index?type=3">
+          <view class="iconfont icon-paobu"></view>
+          <view class="health_name">运动</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont icon-yinshi"></view>
+          <view class="health_name">饮食</view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 收货地址管理 -->
+    <navigator class="address_wrap br" url="./modifyInfo/index?openid={{openid}}">
+      修改个人信息及身体状态
+    </navigator>
+    <!-- 应用信息相关 -->
+    <view class="app_info_wrap br">
+      <view class="app_info_item app_info_contact">
+        <text>联系客服</text>
+        <text>400-618-4000</text>
+      </view>
+      <navigator url="/pages/feedback/index" class="app_info_item">意见反馈</navigator>
+      <view class="app_info_item">关于我们</view>
+    </view>
+    <!-- 推荐 -->
+    <view class="recommend_wrap br">
+      把应用推荐给其他人
+    </view>
+    <button wx:if="{{ifAdministrator&&userInfo.avatarUrl}}" bindtap="toUploadFile">进入上传文章界面</button>
+    <button wx:if="{{ifAdministrator&&userInfo.avatarUrl}}" bindtap="toCreateVote">进入创建投票界面</button>
+  </view>
+</view>

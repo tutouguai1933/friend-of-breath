@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/home/voteSystem/voteSystem",
+    "pages/paper/index",
+    "pages/record/index",
+    "pages/my/index",
+    "pages/login/index",
+    "pages/index/index",
+    "pages/getOpenId/index",
+    "pages/getMiniProgramCode/index",
+    "pages/deployService/index",
+    "pages/createCollection/index",
+    "pages/uploadFile/index",
+    "pages/selectRecord/index",
+    "pages/updateRecord/index",
+    "pages/updateRecordResult/index",
+    "pages/updateRecordSuccess/index",
+    "pages/sumRecord/index",
+    "pages/sumRecordResult/index",
+    "pages/paper/paperDetail/paperDetail",
+    "pages/my/modifyInfo/index",
+    "pages/my/createVote/createVote",
+    "pages/my/creatQuestion/lookData/index",
+    "pages/my/creatQuestion/newQues/index",
+    "pages/my/creatQuestion/addQues/addQues",
+    "pages/my/creatQuestion/preview/preview",
+    "pages/my/creatQuestion/dataDetail/dataDetail",
+    "pages/home/questionSystem/index/index",
+    "pages/home/questionSystem/question/question",
+    "pages/home/questionSystem/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarTitleText": "呼吸之友",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#333333",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "icons/home-0.png",
+        "selectedIconPath": "icons/home-1.png"
+      },
+      {
+        "pagePath": "pages/paper/index",
+        "text": "文章",
+        "iconPath": "icons/paper-0.png",
+        "selectedIconPath": "icons/paper-1.png"
+      },
+      {
+        "pagePath": "pages/record/index",
+        "text": "打卡",
+        "iconPath": "icons/record-0.png",
+        "selectedIconPath": "icons/record-1.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "icons/my-0.png",
+        "selectedIconPath": "icons/my-1.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
+
+

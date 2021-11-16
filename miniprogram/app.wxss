@@ -1,0 +1,42 @@
+@import "./styles/iconfont.wxss";
+@import "./styles/colorui/main.wxss";
+@import "./styles/colorui/icon.wxss";
+
+/* 微笑小程序中不支持通配符* */
+
+page,view,text,swiper,swiper-item,image,navigator{
+    padding: 0;
+    margin: 0;
+    border-style: border-box;
+}
+
+/* 主体颜色 通过变量来实现 
+less中存在变量这个知识
+原生的css和wxss也是支持变量的
+*/
+
+page{
+    /* 定义主题颜色 */
+    --themeColor:#eb4450;
+    /* 定义统一的字体大小 */
+    font-size: 28rpx;
+}
+
+
+image{
+    width: 100%;
+}
+
+.text-cumtb{
+	color: #A2E1D4;
+}
+.text-cumtb2{
+	color: #eb4450;
+}
+
+.bg-cumtb{
+	background-color: #A2E1D4;
+}
+.bg-cumtb2{
+	background-color: #eb4450;
+}

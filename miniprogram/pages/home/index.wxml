@@ -1,0 +1,14 @@
+<SearchInput></SearchInput>
+<view class="swiper_wrap">
+    <swiper indicator-dots="{{true}}" indicator-color="white" autoplay="{{true}}" interval="{{3000}}" duration="{{500}}" circular="{{true}}">
+        <navigator wx:for="{{swiperList}}" url="../paper/paperDetail/paperDetail?_id={{item._id}}">
+            <swiper-item>
+                <view class="image_wrap">
+                    <image class="swiper_image" src="{{item.imageUrl}}" />
+                    <view class="swiper_title">{{item.articleTitle}}</view>
+                </view>
+            </swiper-item>
+        </navigator>
+    </swiper>
+</view>
+<navigator class="br" url="./questionSystem/login/login">点我进入问卷系统</navigator>

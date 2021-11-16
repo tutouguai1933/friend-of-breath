@@ -1,0 +1,12 @@
+
+<view class="text-center text-xxl text-bold">在线问卷调查系统</view>
+<view class="bgImg">
+    <view class="frame">
+        <button class="cu-btn block bg-grey" bindtap="navToWriter">创建问卷</button>
+
+        <button class="cu-btn margin-top-xl block bg-grey" bindtap="lookData">查看问卷数据</button>
+
+
+        <button class="cu-btn margin-top-xl block bg-grey" bindtap="navToReader">填写问卷</button>
+    </view>
+</view>

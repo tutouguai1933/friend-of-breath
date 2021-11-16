@@ -1,0 +1,43 @@
+page {
+  background-color: #edece8;
+}
+.modifyInfo .top {
+  text-align: center;
+}
+.modifyInfo .top .avatar_warp {
+  top: 20%;
+  text-align: center;
+}
+.modifyInfo .top .avatar_warp image {
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 50%;
+}
+.modifyInfo .top .nickName {
+  color: orangered;
+  margin-top: 20rpx;
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.modifyInfo .middle {
+  margin-bottom: 50rpx;
+}
+.modifyInfo .middle .input_warp {
+  width: 90%;
+  border-radius: 15rpx;
+  background: white;
+  -webkit-box-shadow: 2px 1px 3px #adadad;
+  margin: 30rpx auto 0 auto;
+  padding: 20rpx;
+}
+.modifyInfo .middle .input_warp .age {
+  border-bottom: 2rpx gray solid;
+}
+.modifyInfo .middle .input_warp input {
+  font-size: 40rpx;
+}
+.modifyInfo .middle .input_warp textarea {
+  width: 100%;
+  border: 2rpx gray solid;
+  font-size: 40rpx;
+}

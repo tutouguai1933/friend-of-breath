@@ -1,0 +1,28 @@
+<view class="article">
+    <view class="top_part">
+        <view class="article_image_warp">
+            <image src="{{article.imageUrl}}" mode="widthFix" />
+        </view>
+    </view>
+    <view class="middle_part">
+        <view class="avatar_warp">
+            <image src="{{article.avatarUrl}}" />
+        </view>
+        <view class="middle_info">
+            <view class="nickname">{{article.nickName}}</view>
+            <view class="button_warp">
+                <button class="star" type="primary" plain="{{true}}" wx:if="{{!ifCollect}}" bindtap="getCollect" size="mini">收藏</button>
+                <button class="star" type="primary" plain="{{false}}" wx:else bindtap="getCollect" size="mini">已收藏</button>
+                <button class="subscription" type="primary" plain="{{true}}" wx:if="{{!ifSubscribe}}" bindtap="getSubscribe" size="mini">关注</button>
+                <button class="subscription" type="primary" plain="{{false}}" wx:else bindtap="getSubscribe" size="mini">已关注</button>
+            </view>
+        </view>
+    </view>
+    <view class="bottom_part">
+        <view class="title">{{article.articleTitle}}</view>
+        <view class="content_warp">
+            <text class="content" selectable="{{true}}" space="ensp">{{article.articleContent}}</text>
+        </view>
+        <view class="time">发布时间:{{article.time}}</view>
+    </view>
+</view>

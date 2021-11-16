@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="title">-- 健康打卡 --</view>
+  <view class="big">
+    <!-- 默认打卡组件 -->
+    <dk-calendar originActiveData="{{user_date_log}}" bind:selectDate="onSelectDate" wx:if="{{isShowDate}}" bindgetActiveDate="handleGetActiveDate"></dk-calendar>
+  </view>
+</view>

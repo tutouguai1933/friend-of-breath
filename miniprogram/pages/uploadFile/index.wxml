@@ -1,0 +1,19 @@
+<view>
+  <view class="box_text" wx:if="{{!imgSrc}}">上传的图片将展示在这里</view>
+  <view  wx:if="{{imgSrc}}" class="code_box">
+    <image class="code_img" src="{{imgSrc}}" mode="widthFix"></image>
+    <view class="img_info">
+      <view class="img_info_title">文件路径</view>
+      <view class="img_info_detail">{{imgSrc}}</view>
+    </view>
+  </view>
+  <view class="button" bindtap="uploadImg" wx:if="{{!haveGetImgSrc}}">上传文章配图</view>
+  <view class="button_clear" bindtap="clearImgSrc" wx:if="{{haveGetImgSrc}}">清空</view>
+  <view class="text">文章标题</view>
+  <input class="article_title" bindinput="getArticleTitle" />
+  <view class="text">文章内容</view>
+  <textarea class="article_content" maxlength="5000" bindinput="getArticleContent"/>
+  <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
+  <button wx:if="{{!ifSubmit}}" class="submit" type="primary" bindtap="submit">提交</button>
+  <button wx:else class="submit" type="primary" bindtap="goBack">回到个人中心界面</button>
+</view>

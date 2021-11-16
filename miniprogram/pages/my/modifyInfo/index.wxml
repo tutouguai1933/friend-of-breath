@@ -1,0 +1,28 @@
+<view class="modifyInfo">
+    <view class="top">
+        <view class="avatar_warp">
+            <image src="{{userInfo.avatarUrl}}" />
+        </view>
+        <view class="nickName">{{userInfo.nickName}}</view>
+    </view>
+    <view class="middle" wx:if="{{modifiableInfo}}">
+        <view class="input_warp">
+            <view class="remind">年龄：</view>
+            <input class="age" type="number" value="{{modifiableInfo.age}}" bindinput="handleAge" />
+        </view>
+        <view class="input_warp">
+            <view class="remind">个性签名：</view>
+            <textarea class="motto" value="{{modifiableInfo.motto}}" bindinput="handleMotto" ></textarea>
+        </view>
+        <view class="input_warp">
+            <view class="remind">病史：</view>
+            <textarea class="medicalHistory" value="{{modifiableInfo.medicalHistory}}" bindinput="handleMedicalHistory" ></textarea>
+        </view>
+        <view class="input_warp">
+            <view class="remind">身体状况：</view>
+            <textarea class="healthCondition" value="{{modifiableInfo.healthCondition}}" bindinput="handleHealthCondition" ></textarea>
+        </view>
+        <button wx:if="{{!ifSubmit}}" type="primary" class="submit" bindtap="submit">提交</button>
+        <button wx:else class="submit" type="primary" plain="{{true}}" >已提交</button>
+    </view>
+</view>

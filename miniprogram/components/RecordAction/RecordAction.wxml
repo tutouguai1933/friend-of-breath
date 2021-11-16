@@ -1,0 +1,10 @@
+<button bindtap="popup">签到</button>
+<view class="load" :style="{{sign?'':'top:calc((100vh - 750rpx)/2);opacity: 0;z-index:-1;'}}">
+  <image class="loadingpic" src="/images/light.png"></image>
+  <image class="load-imagae" src="/images/register.png"></image>
+  <view class="load-centent">
+    <view>签到成功</view>
+    <view>获得0积分</view>
+    <view bindtap="popup">好的</view>
+  </view>
+</view>

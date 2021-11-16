@@ -1,0 +1,21 @@
+/* pages/login/login.wxss */
+
+
+.banner{
+	background-color:#70624F;
+}
+.frame{
+ border:solid 1rpx; 
+	border-radius: 20rpx;
+	padding:80rpx;
+	background-color: #c2c1c1e1;
+}
+
+.bgImg{
+	
+	height: 700rpx;
+	padding:120rpx 100rpx;
+	margin: 50rpx 0;
+	background-repeat:no-repeat; 
+	background-size:auto 100%;
+}

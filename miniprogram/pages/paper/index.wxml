@@ -1,0 +1,21 @@
+<view class="article_list">
+    <navigator class="article_item" url="./paperDetail/paperDetail?_id={{item._id}}" 
+    wx:for="{{list}}"
+    wx:key="_id">
+        <!-- 左侧 图片容器 -->
+        <view class="article_img_wrap">
+            <image mode="widthFix" class="article_img" src="{{item.imageUrl}}" />
+        </view>
+        <!-- 右侧 信息容器-->
+        <view class="article_info_wrap">
+            <view class="article_name">{{item.articleTitle}}</view>
+            <view class="article_summary_wrap">
+                <view class="article_summary">{{item.articleContent}}</view>
+            </view>
+            <view class="other_info">
+                <view class="article_writer">{{item.nickName}}</view>
+                <view class="article_date">{{item.date}}</view>
+            </view>
+        </view>
+    </navigator>
+</view>
