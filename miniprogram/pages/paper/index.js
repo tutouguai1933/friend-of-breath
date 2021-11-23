@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-08-31 14:28:55
- * @LastEditTime: 2021-09-17 19:43:46
+ * @LastEditTime: 2021-11-17 14:02:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \呼吸之友\miniprogram\pages\paper\index.js

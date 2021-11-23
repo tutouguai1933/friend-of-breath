@@ -92,6 +92,7 @@
   height: 24rpx;
   /* 增大点击范围 */
   padding: 10rpx 24rpx;
+  z-index: 1;
 }
 
 .pnBox text {

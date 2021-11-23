@@ -6,7 +6,7 @@
         <form bindsubmit="submit">
             <view class="cu-bar bg-cumtb solid-bottom margin-lr margin-top radius">
                 <text class="cuIcon-title text-cumtb2 margin-left">
-				<text class="text-white margin-left">题目类型</text>
+				<text class="margin-left">题目类型</text>
                 </text>
             </view>
             <view class="bg-white padding-lr-xl justify-between align-center margin-top flex">
@@ -45,7 +45,7 @@
 
             <view class="cu-bar bg-cumtb solid-bottom margin-lr margin-top radius">
                 <text class="cuIcon-title text-cumtb2 margin-left">
-				<text class="text-white margin-left">请为该题添加描述</text>
+				<text class="margin-left">请为该题添加描述</text>
                 </text>
             </view>
             <view class="bg-white padding-lr-xl margin-top">
@@ -54,7 +54,7 @@
             <view wx:if="{{type!=2}}">
                 <view class="cu-bar bg-cumtb solid-bottom margin-lr margin-top radius">
                     <text class="cuIcon-title text-cumtb2 margin-left">
-				<text class="text-white margin-left">题目选项</text>
+				<text class="margin-left">题目选项</text>
                     </text>
                     <view class="margin-right">
                         <button class="cu-btn text-white bg-cumtb2" bindtap="addItem">添加新选项</button>

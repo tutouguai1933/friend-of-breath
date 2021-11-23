@@ -1,6 +1,6 @@
 <!--pages/reader/index/index.wxml-->
 
-<view class="text-center text-bold text-xxl text-white margin-top">填写问卷</view>
+<view class="text-center text-bold text-xxl margin-top">填写问卷</view>
 <view class="cu-card">
 	<view class="cu-item">
 		<form bindsubmit="getQues">

@@ -18,4 +18,5 @@
             </view>
         </view>
     </navigator>
+    <view style="height:350rpx"></view>
 </view>

@@ -47,11 +47,11 @@
           <view class="iconfont icon-fei"></view>
           <view class="health_name">肺活量</view>
         </navigator>
-        <navigator url="/pages/order/index?type=3">
+        <navigator url="./sports/index">
           <view class="iconfont icon-paobu"></view>
           <view class="health_name">运动</view>
         </navigator>
-        <navigator>
+        <navigator url="./diet/index">
           <view class="iconfont icon-yinshi"></view>
           <view class="health_name">饮食</view>
         </navigator>
@@ -75,6 +75,6 @@
       把应用推荐给其他人
     </view>
     <button wx:if="{{ifAdministrator&&userInfo.avatarUrl}}" bindtap="toUploadFile">进入上传文章界面</button>
-    <button wx:if="{{ifAdministrator&&userInfo.avatarUrl}}" bindtap="toCreateVote">进入创建投票界面</button>
+    <button wx:if="{{ifAdministrator&&userInfo.avatarUrl}}" bindtap="toCreateVote">进入创建问卷界面</button>
   </view>
 </view>

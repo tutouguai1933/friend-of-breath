@@ -31,11 +31,11 @@ Component({
     currDayTag: 0, //大日历需要算上空白
     currYear: '',
     currMonth: '',
-    activeData:[],
-    isNext:true,
-    isPre:true,
-    today:'',
-    ifTodayRecord:false
+    activeData: [],
+    isNext: true,
+    isPre: true,
+    today: '',
+    ifTodayRecord: false
 
   },
 
@@ -45,7 +45,7 @@ Component({
   methods: {
     // 顶部上下月点击
     preDate() {
-      if(!this.data.isPre) return
+      if (!this.data.isPre) return
       let month = this.data.chooseMonth
       let year = this.data.chooseYear
       month--
@@ -60,7 +60,7 @@ Component({
       this.getInit()
     },
     nextDate() {
-      if(!this.data.isNext) return
+      if (!this.data.isNext) return
       let month = this.data.chooseMonth
       let year = this.data.chooseYear
       month++
@@ -75,22 +75,30 @@ Component({
       this.getInit()
     },
     //检查日期
-    checkedDate(){
+    checkedDate() {
       let year = this.data.chooseYear
       let month = this.data.chooseMonth
       let currYear = this.data.currYear
       let currMonth = this.data.currMonth
       //限制日期-上
-      if(year==2021&&month==1){
-        this.setData({isPre:false})
-      }else{
-        this.setData({isPre:true})
+      if (year == 2021 && month == 1) {
+        this.setData({
+          isPre: false
+        })
+      } else {
+        this.setData({
+          isPre: true
+        })
       }
       //限制日期-下
-      if(year==currYear&&month==currMonth){
-        this.setData({isNext:false})
-      }else{
-        this.setData({isNext:true})
+      if (year == currYear && month == currMonth) {
+        this.setData({
+          isNext: false
+        })
+      } else {
+        this.setData({
+          isNext: true
+        })
       }
     },
     // 去打卡详情页
@@ -323,25 +331,75 @@ Component({
       return [year, month, day].map(formatNumber).join('/')
     },
     //今日打卡
-    record(){
-      console.log("今日打卡",this.data.currDayDetail)
-      this.setData({
-        activeData:[...this.data.activeData,this.data.currDayDetail],
-        ifTodayRecord:true
+    async record() {
+      //上传图片
+
+      wx.showLoading({
+        title: '',
       })
-      console.log("ifTodayRecord",this.data.ifTodayRecord)
+      // 让用户选择一张图片
+      let time = Date.now()
+      console.log(time)
+      await wx.chooseImage({
+        count: 1,
+        success: chooseResult => {
+          console.log("chooseResult", chooseResult)
+          let index = chooseResult.tempFilePaths[0].lastIndexOf(".")
+          let imgFormat = chooseResult.tempFilePaths[0].substr(index)
+          console.log("asid7uhasiduhaos8dhjoasd",imgFormat)
+          wx.cloud.uploadFile({
+            cloudPath: "recordImage/" + time +imgFormat,
+            filePath: chooseResult.tempFilePaths[0],
+            config: {
+              env: "cloud1-9gkkz7vcaee8d976"
+            }
+          })
+          let db = wx.cloud.database();
+          const _ = db.command
+          db.collection("userInfo")
+            .where({
+              openid: "o4U8-4_HpKdr6jDvbc2bhdyVdU-I"
+            })
+            .update({
+              data: {
+                recordImage:_.push([{
+                  date:this.data.currDayDetail,
+                  url:"recordImage/" + time +imgFormat
+                }])
+              }
+            })
+          wx.hideLoading()
+        },
+        fail: res => {
+          wx.hideLoading()
+        }
+      })
+
+
+
+      //打卡并刷新组件-------------------------------------------------------
+      console.log("今日打卡", this.data.currDayDetail)
+      this.setData({
+        activeData: [...this.data.activeData, this.data.currDayDetail],
+        ifTodayRecord: true
+      })
+      console.log("ifTodayRecord", this.data.ifTodayRecord)
       console.log(this.data.activeData)
       this.getInit()
-      this.triggerEvent("getActiveDate",this.data.activeData)
+      this.triggerEvent("getActiveDate", this.data.activeData)
     },
   },
-  
+
   lifetimes: {
-     attached: function () {
+    attached: function () {
       let that = this
       // 在组件实例进入页面节点树时执行
-      this.data.originActiveData.map(currentValue => {that.data.activeData.push(that.getFormatDate(currentValue))})
-      this.setData({activeData:this.data.activeData})
+      this.data.originActiveData.map(currentValue => {
+        that.data.activeData.push(that.getFormatDate(currentValue))
+      })
+      this.setData({
+        activeData: this.data.activeData
+      })
       console.log('选中日期:', this.data.activeData)
       //初始化当前年月
       this.setData({
@@ -354,10 +412,10 @@ Component({
         this.getInitSm()
       else
         this.getInit()
-      var today=this.data.currDayDetail;
+      var today = this.data.currDayDetail;
       var ifTodayRecord;
-      if(this.data.activeData[this.data.activeData.length-1]===today){
-        ifTodayRecord=true
+      if (this.data.activeData[this.data.activeData.length - 1] === today) {
+        ifTodayRecord = true
       }
       this.setData({
         today,

@@ -28,7 +28,9 @@
     "pages/my/creatQuestion/dataDetail/dataDetail",
     "pages/home/questionSystem/index/index",
     "pages/home/questionSystem/question/question",
-    "pages/home/questionSystem/login/login"
+    "pages/home/questionSystem/login/login",
+    "pages/my/diet/index",
+    "pages/my/sports/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,14 @@
+.br {
+  border-radius: 15rpx;
+  background: white;
+  -webkit-box-shadow: 2px 1px 3px #adadad;
+  width: 90%;
+  margin: 30rpx auto 0 auto;
+}
+.br .date {
+  font-size: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

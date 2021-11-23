@@ -1,0 +1,4 @@
+<view class="br" wx:for="{{list}}" wx:for-item="item" wx:key="{{item.date}}">
+    <view class="date">{{item.date}}</view>
+    <image src="{{item.imageUrl}}" mode="aspectFit"/>
+</view>

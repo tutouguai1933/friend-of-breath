@@ -1,12 +1,23 @@
-# 云开发 quickstart
+# README
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
+##### 目的：
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+后疫情时代下，为了更多人的呼吸康复和呼吸健康，编写此小程序供使用
 
-## 参考文档
+##### 简介:
 
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+​	小程序实现了发布和查看图文信息、每日健康打卡、发布和参与健康投票、对用户的身体健康提出合理化建议等功能。
 
+##### 界面：
+
+<img src="readme_image/home.png" alt="首页" style="zoom:50%;" />
+
+<img src="readme_image/article.png" alt="文章" style="zoom:50%;" />
+
+<img src="readme_image/record.png" alt="打卡" style="zoom:50%;" />
+
+<img src="readme_image/my.png" style="zoom:50%;" />
+
+<img src="readme_image/upload.png" style="zoom:50%;" />
+
+<img src="readme_image/uploadVote.png" alt="创建投票" style="zoom:50%;" />

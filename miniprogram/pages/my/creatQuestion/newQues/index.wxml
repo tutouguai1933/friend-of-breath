@@ -6,7 +6,7 @@
 
             <view class="cu-bar bg-cumtb solid-bottom margin-lr margin-top">
                 <text class="cuIcon-title text-cumtb2 margin-left">
-				<text class="text-white margin-left">请为您的问卷起一个标题</text>
+				<text class="margin-left">请为您的问卷起一个标题</text>
                 </text>
             </view>
             <view class="bg-white padding-lr-xl margin-top">
@@ -17,7 +17,7 @@
 
             <view class="cu-bar bg-cumtb solid-bottom margin-lr margin-top">
                 <text class="cuIcon-title text-cumtb2 margin-left">
-				<text class="text-white margin-left">请为您的问卷添加描述信息</text>
+				<text class="margin-left">请为您的问卷添加描述信息</text>
                 </text>
             </view>
             <view class="bg-white padding-lr-xl margin-top">
